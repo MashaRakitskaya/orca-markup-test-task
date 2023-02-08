@@ -1,0 +1,19 @@
+:root {
+  --main-font-family: 'Mulish', sans-serif;
+  --main-font-color: #10111d;
+  --header-font-color: #70707b;
+  --secondary-color: #cacfdb;
+
+  --main-bg-color: #f3f4f9;
+  --secondary-bg-color: #ffffff;
+
+  --tr-bg-color-hover: #10111d;
+
+  --main-button-color: #0080ff;
+  --main-button-font-color: #ffffff;
+
+  --border: 1px solid #cacfdb;
+  --border-hover: 1px solid rgba(0, 128, 255, 1);
+
+  --hover-color: #0080ff;
+}

@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from 'modules/Home/Home'
+import { Page, PageContainer } from 'App.styles'
 
 const App = () => (
-  <div>
-    Hello <Home />
-  </div>
+  <Page>
+    <PageContainer></PageContainer>
+  </Page>
 )
 
 export default App
