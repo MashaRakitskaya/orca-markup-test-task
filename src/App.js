@@ -1,9 +1,12 @@
 import React from 'react'
 import { Page, PageContainer } from 'App.styles'
+import Header from 'modules/Header/Header'
 
 const App = () => (
   <Page>
-    <PageContainer></PageContainer>
+    <PageContainer>
+      <Header />
+    </PageContainer>
   </Page>
 )
 
