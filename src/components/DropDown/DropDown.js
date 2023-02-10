@@ -1,0 +1,46 @@
+import React, { useState } from 'react'
+import {
+  DropDownContainer,
+  DropDownButton,
+  DropDownList,
+  DropDownListContainer,
+  DropDownListItem,
+  DropDownArrowWrapper,
+} from 'components/DropDown/DropDown.styles'
+import dropdownArrow from 'images/dropdownarrow.svg'
+import SVG from 'react-inlinesvg'
+
+const DropDown = ({ DropDownButtonTitle, DropDownButtonImg, DropDownButtonImgAlt, options }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleDropDown = () => setIsOpen(!isOpen)
+
+  const onDropDownListItemClick = () => {
+    setIsOpen(false)
+  }
+
+  return (
+    <DropDownContainer>
+      <DropDownButton onClick={toggleDropDown}>
+        <SVG src={DropDownButtonImg} alt={DropDownButtonImgAlt}></SVG>
+        <p>{DropDownButtonTitle}</p>
+        <DropDownArrowWrapper isOpen={isOpen}>
+          <SVG src={dropdownArrow} alt="dropdown arrow"></SVG>
+        </DropDownArrowWrapper>
+      </DropDownButton>
+      {isOpen && (
+        <DropDownListContainer>
+          <DropDownList>
+            {options.map(({ name, id }) => (
+              <DropDownListItem onClick={onDropDownListItemClick} key={id}>
+                {name}
+              </DropDownListItem>
+            ))}
+          </DropDownList>
+        </DropDownListContainer>
+      )}
+    </DropDownContainer>
+  )
+}
+
+export default DropDown
