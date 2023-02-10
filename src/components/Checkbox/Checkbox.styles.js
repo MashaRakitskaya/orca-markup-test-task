@@ -1,5 +1,11 @@
 import styled from 'styled-components'
-import { mainFontColor, mainColor, border, borderHover, transition } from 'styles/variables.styles'
+import {
+  mainFontColor,
+  mainColor,
+  mainBorder,
+  mainBorderHover,
+  mainTransition,
+} from 'styles/variables.styles'
 
 export const CheckboxContainer = styled.div`
   weight: 164px;
@@ -19,7 +25,7 @@ export const CheckboxContainer = styled.div`
       content: '';
       background: ${({ checkmark }) => checkmark} no-repeat 50%;
       background-size: 8px 6px;
-      ${mainColor({ property: 'background-color' })};
+      background-color: ${mainColor};
     }
   }
 
@@ -33,21 +39,22 @@ export const CheckboxContainer = styled.div`
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    ${mainFontColor}
+    white-space: nowrap;
+    color: ${mainFontColor};
     cursor: pointer;
     display: flex;
 
     &:hover {
       &::before {
-        ${transition({ property: 'border-color' })}
-        ${borderHover}
+        ${mainTransition({ property: 'border-color' })}
+        border:${mainBorderHover};
       }
     }
   }
 
   label::before {
     content: '';
-    ${border({ property: 'border' })}
+    ${mainBorder({ borderType: 'border' })};
     width: 12px;
     height: 12px;
     border-radius: 2px;

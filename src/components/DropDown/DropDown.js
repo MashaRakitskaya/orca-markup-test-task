@@ -5,11 +5,12 @@ import {
   DropDownList,
   DropDownListContainer,
   DropDownListItem,
+  DropDownArrowWrapper,
 } from 'components/DropDown/DropDown.styles'
-import dropdownarrow from 'images/dropdownarrow.svg'
+import dropdownArrow from 'images/dropdownarrow.svg'
 import SVG from 'react-inlinesvg'
 
-const DropDown = ({ DropDownButtonValue, DropDownButtonImg, DropDownButtonImgAlt, options }) => {
+const DropDown = ({ DropDownButtonTitle, DropDownButtonImg, DropDownButtonImgAlt, options }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleDropDown = () => setIsOpen(!isOpen)
@@ -22,14 +23,10 @@ const DropDown = ({ DropDownButtonValue, DropDownButtonImg, DropDownButtonImgAlt
     <DropDownContainer>
       <DropDownButton onClick={toggleDropDown}>
         <SVG src={DropDownButtonImg} alt={DropDownButtonImgAlt}></SVG>
-        <p>{DropDownButtonValue}</p>
-        <SVG
-          src={dropdownarrow}
-          alt="dropdown arrow"
-          style={{
-            transform: isOpen ? 'rotate(180deg)' : '',
-          }}
-        ></SVG>
+        <p>{DropDownButtonTitle}</p>
+        <DropDownArrowWrapper isOpen={isOpen}>
+          <SVG src={dropdownArrow} alt="dropdown arrow"></SVG>
+        </DropDownArrowWrapper>
       </DropDownButton>
       {isOpen && (
         <DropDownListContainer>

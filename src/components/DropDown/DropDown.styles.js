@@ -4,9 +4,9 @@ import {
   secondaryBgColor,
   mainColor,
   dropdownBgColorHover,
-  border,
-  borderHover,
-  transition,
+  mainBorder,
+  mainBorderHover,
+  mainTransition,
 } from 'styles/variables.styles'
 
 export const DropDownContainer = styled.div`
@@ -20,34 +20,33 @@ export const DropDownButton = styled.button`
   justify-content: center;
   padding: 6px 8px;
   height: 30px;
-  ${secondaryBgColor}
-  ${border({ property: 'border' })}
+  background-color: ${secondaryBgColor};
+  ${mainBorder({ borderType: 'border' })};
   border-radius: 4px;
-  ${transition({ property: 'border-color' })}
+  ${mainTransition({ property: 'border-color' })}
 
   p {
     margin: 0 8px 0 8px;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    ${mainFontColor}
+    white-space: nowrap;
+    color: ${mainFontColor};
   }
 
   SVG {
-    ${transition({ property: 'transform' })}
-
     path {
-      ${transition({ property: 'fill' })}
+      ${mainTransition({ property: 'fill' })};
     }
   }
 
   &:hover {
-    ${borderHover}
+    border: ${mainBorderHover};
 
     & SVG {
       path {
         transition-property: fill;
-        ${mainColor({ property: 'fill' })};
+        fill: ${mainColor};
       }
     }
   }
@@ -60,13 +59,13 @@ export const DropDownList = styled.ul`
   weight: 100%;
   margin: 4px 0 0 0;
   padding: 4px 0 4px 0;
-  ${secondaryBgColor}
+  background-color: ${secondaryBgColor};
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  ${mainFontColor}
+  color: ${mainFontColor};
 `
 export const DropDownListItem = styled.li`
   white-space: nowrap;
@@ -76,14 +75,30 @@ export const DropDownListItem = styled.li`
   padding-left: 16px;
   padding-right: 16px;
   cursor: pointer;
-  ${transition({ property: 'background-color' })}
+  ${mainTransition({ property: 'background-color' })};
 
   &:hover {
-    ${mainColor({ property: 'color' })};
-    ${dropdownBgColorHover}
+    color: ${mainColor};
+    background-color: ${dropdownBgColorHover};
   }
 
   &:last-child {
     margin-bottom: 0;
+  }
+`
+
+export const DropDownArrowWrapper = styled.div`
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  SVG {
+    ${mainTransition({ property: 'transform' })}
+    transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : '')};
+
+    path {
+      ${mainTransition({ property: 'fill' })}
+    }
   }
 `

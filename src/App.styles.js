@@ -4,8 +4,8 @@ import { mainFontFamily, mainBgColor } from 'styles/variables.styles'
 export const Page = styled.div`
   height: 100vh;
   overflow: auto;
-  ${mainBgColor}
-  ${mainFontFamily}
+  background-color:${mainBgColor}
+  font-family: ${mainFontFamily}
   display: flex;
 `
 export const PageContainer = styled.div`
