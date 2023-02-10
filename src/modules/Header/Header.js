@@ -5,6 +5,7 @@ import Checkbox from 'components/Checkbox/Checkbox'
 import DropDown from 'components/DropDown/DropDown'
 import group from 'images/group.svg'
 import sort from 'images/sort.svg'
+import SwitchButton from 'components/SwitchButton/SwitchButton'
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
       <Filters>
         <Checkbox id={'checkbox1'} label={'Show additional items'} />
         <DropDown
-          DropDownButtonValue={'Group by'}
+          DropDownButtonTitle={'Group by'}
           DropDownButtonImg={group}
           DropDownButtonImgAlt={'group'}
           options={[
@@ -25,7 +26,7 @@ const Header = () => {
           ]}
         ></DropDown>
         <DropDown
-          DropDownButtonValue={'Sort by'}
+          DropDownButtonTitle={'Sort by'}
           DropDownButtonImg={sort}
           DropDownButtonImgAlt={'sort'}
           options={[
@@ -36,7 +37,7 @@ const Header = () => {
             { name: 'Scan source', id: '5' },
           ]}
         ></DropDown>
-        <p>sdgs</p>
+        <SwitchButton />
       </Filters>
     </HeaderStyled>
   )
