@@ -54,7 +54,7 @@ export const CheckboxContainer = styled.div`
 
   label::before {
     content: '';
-    ${mainBorder({ borderType: 'border' })};
+    border: ${mainBorder};
     width: 12px;
     height: 12px;
     border-radius: 2px;

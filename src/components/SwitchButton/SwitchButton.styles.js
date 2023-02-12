@@ -13,7 +13,7 @@ export const SwitchButtonWrapper = styled.div`
   padding: 1px;
   border-radius: 4px;
   background-color: ${secondaryBgColor};
-  ${mainBorder({ borderType: 'border' })};
+  border: ${mainBorder};
   cursor: pointer;
   display: flex;
   align-items: center;

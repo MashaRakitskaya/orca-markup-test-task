@@ -4,7 +4,7 @@ import { mainBorder } from 'styles/variables.styles'
 export const HeaderStyled = styled.header`
   width: 100%;
   height: 57px;
-  ${mainBorder({ borderType: 'border-bottom' })};
+  border-bottom: ${mainBorder};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
