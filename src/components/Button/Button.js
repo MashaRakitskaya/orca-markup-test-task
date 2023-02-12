@@ -1,15 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Wrapper } from 'components/Button/Button.styles'
+import { ButtonStyled } from './Button.styles'
 
-const Button = ({ children }) => <Wrapper>{children}</Wrapper>
-
-Button.propTypes = {
-  children: PropTypes.node,
-}
-
-Button.defaultProps = {
-  children: null,
+const Button = ({ buttonText, secondary = false }) => {
+  return <ButtonStyled secondary={secondary}>{buttonText}</ButtonStyled>
 }
 
 export default Button
