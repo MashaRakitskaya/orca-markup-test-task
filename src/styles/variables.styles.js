@@ -4,6 +4,8 @@ export const mainFontColor = `#10111d;`
 
 export const headerFontColor = `#70707b;`
 
+export const secondaryFontColor = `#ffffff;`
+
 export const secondaryColor = `#cacfdb`
 
 export const mainBgColor = `#f3f4f9;`
@@ -18,9 +20,7 @@ export const dropdownBgColorHover = `#e1eefd;`
 
 export const mainButtonFontColor = `#ffffff;`
 
-export const mainBorder = ({ borderType }) => `
-  ${borderType}: 1px solid #cacfdb;
-`
+export const mainBorder = `1px solid #cacfdb;`
 
 export const mainBorderHover = `1px solid rgba(0, 128, 255, 1);`
 
@@ -31,3 +31,5 @@ transition-timing-function: ease;
 `
 
 export const fillImgColor = { blue: '#0080ff', white: '#ffffff', dark: '#10111d', gray: '#cacfdb' }
+
+export const mainBoxShadow = `0px 0px 0px 2px #e1eefd`

@@ -7,9 +7,14 @@ export const Page = styled.div`
   background-color:${mainBgColor}
   font-family: ${mainFontFamily}
   display: flex;
+
 `
 export const PageContainer = styled.div`
   margin: auto;
   min-width: 320px;
   width: 1224px;
+`
+export const Main = styled.main`
+  padding-top: 32px;
+  width: 100%;
 `
