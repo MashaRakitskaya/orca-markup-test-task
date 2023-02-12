@@ -5,8 +5,9 @@ import {
   mainColor,
   dropdownBgColorHover,
   mainBorder,
-  mainBorderHover,
   mainTransition,
+  secondaryFontColor,
+  fillImgColor,
 } from 'styles/variables.styles'
 
 export const DropDownContainer = styled.div`
@@ -20,10 +21,13 @@ export const DropDownButton = styled.button`
   justify-content: center;
   padding: 6px 8px;
   height: 30px;
-  background-color: ${secondaryBgColor};
-  ${mainBorder({ borderType: 'border' })};
+  background-color: ${({ secondary }) => (secondary ? `${mainColor}` : 'transparent')};
+  border: ${({ secondary }) => (secondary ? 'none' : `${mainBorder}`)};
   border-radius: 4px;
-  ${mainTransition({ property: 'border-color' })}
+  ${({ secondary }) =>
+    secondary
+      ? `${mainTransition({ property: 'box-shadow' })}`
+      : `${mainTransition({ property: 'border-color' })}`};
 
   p {
     margin: 0 8px 0 8px;
@@ -31,22 +35,21 @@ export const DropDownButton = styled.button`
     font-size: 14px;
     line-height: 18px;
     white-space: nowrap;
-    color: ${mainFontColor};
+    color: ${({ secondary }) => (secondary ? `${secondaryFontColor}` : `${mainFontColor}`)};
   }
 
   SVG {
     path {
       ${mainTransition({ property: 'fill' })};
+      fill: ${({ secondary }) => (secondary ? `${fillImgColor.white}` : `${fillImgColor.gray}`)};
     }
   }
 
   &:hover {
-    border: ${mainBorderHover};
-
     & SVG {
       path {
         transition-property: fill;
-        fill: ${mainColor};
+        fill: ${({ secondary }) => (secondary ? `${fillImgColor.white}` : `${fillImgColor.blue}`)};
       }
     }
   }

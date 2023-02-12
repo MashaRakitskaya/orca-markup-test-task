@@ -10,7 +10,13 @@ import {
 import dropdownArrow from 'images/dropdownarrow.svg'
 import SVG from 'react-inlinesvg'
 
-const DropDown = ({ DropDownButtonTitle, DropDownButtonImg, DropDownButtonImgAlt, options }) => {
+const DropDown = ({
+  DropDownButtonTitle,
+  DropDownButtonImg,
+  DropDownButtonImgAlt,
+  options,
+  secondary = false,
+}) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleDropDown = () => setIsOpen(!isOpen)
@@ -21,7 +27,7 @@ const DropDown = ({ DropDownButtonTitle, DropDownButtonImg, DropDownButtonImgAlt
 
   return (
     <DropDownContainer>
-      <DropDownButton onClick={toggleDropDown}>
+      <DropDownButton secondary={secondary} onClick={toggleDropDown}>
         <SVG src={DropDownButtonImg} alt={DropDownButtonImgAlt}></SVG>
         <p>{DropDownButtonTitle}</p>
         <DropDownArrowWrapper isOpen={isOpen}>
