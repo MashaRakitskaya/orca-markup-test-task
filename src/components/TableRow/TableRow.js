@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import CopyButton from 'components/CopyButton/CopyButton'
 import ScanSourceAnchor from 'components/ScanSourceAnchor/ScanSourceAnchor'
 import FileNameAndSize from 'components/FileNameAndSize/FileNameAndSize'
-import { ExpandedTableRow, TableRowStyled } from './TableRow.styles'
+import { ExpandedTableRow, TableRowEmpty, TableRowStyled } from './TableRow.styles'
 import AdditionalInfo from 'components/AdditionalInfo/AdditionalInfo'
 import { getSeverityIcon } from 'utils/utils'
 
@@ -48,6 +48,7 @@ const TableRow = ({
           </td>
         </ExpandedTableRow>
       )}
+      <TableRowEmpty />
     </>
   )
 }

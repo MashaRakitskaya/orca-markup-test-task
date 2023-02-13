@@ -3,7 +3,7 @@ import { headerFontColor } from 'styles/variables.styles'
 
 export const TableStyled = styled.table`
   border-collapse: separate;
-  border-spacing: 0 8px;
+  border-spacing: 0;
   width: 100%;
   table-layout: auto;
 

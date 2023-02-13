@@ -58,6 +58,14 @@ export const ExpandedTableRow = styled.tr`
   td {
     padding: 0px;
     border: ${mainBorder};
+    border-top: none;
     border-radius: 4px;
+  }
+`
+
+export const TableRowEmpty = styled.tr`
+  height: 8px;
+  &:last-of-type {
+    height: 0;
   }
 `
