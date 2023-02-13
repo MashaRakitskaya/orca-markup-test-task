@@ -11,6 +11,7 @@ export const Button = styled.button`
   border: ${mainBorder};
   border-radius: 4px;
   cursor: pointer;
+  width: fit-content;
 
   SVG {
     width: 10px;
