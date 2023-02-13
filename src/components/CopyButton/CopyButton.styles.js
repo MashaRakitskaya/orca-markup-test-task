@@ -1,5 +1,14 @@
 import styled from 'styled-components'
 import { mainBorder, fillImgColor, mainTransition } from 'styles/variables.styles'
+import SVG from 'react-inlinesvg'
+
+export const StyledSVG = styled(SVG)`
+  width: 10px;
+  height: 12px;
+  path {
+    ${mainTransition({ property: 'fill' })}
+  }
+`
 
 export const Button = styled.button`
   display: flex;
@@ -13,16 +22,8 @@ export const Button = styled.button`
   cursor: pointer;
   width: fit-content;
 
-  SVG {
-    width: 10px;
-    height: 12px;
-    path {
-      ${mainTransition({ property: 'fill' })}
-    }
-  }
-
   &:hover {
-    SVG {
+    ${StyledSVG} {
       path {
         fill: ${fillImgColor.blue};
       }
