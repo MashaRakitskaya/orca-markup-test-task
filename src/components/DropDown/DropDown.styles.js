@@ -21,7 +21,8 @@ export const DropDownButton = styled.button`
   justify-content: center;
   padding: 6px 8px;
   height: 30px;
-  background-color: ${({ secondary }) => (secondary ? `${mainColor}` : 'transparent')};
+
+  background-color: ${({ secondary }) => (secondary ? `${mainColor}` : `${secondaryBgColor}`)};
   border: ${({ secondary }) => (secondary ? 'none' : `${mainBorder}`)};
   border-radius: 4px;
   ${({ secondary }) =>
