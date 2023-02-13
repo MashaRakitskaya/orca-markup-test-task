@@ -52,3 +52,12 @@ export const TableRowStyled = styled.tr`
     }
   }
 `
+
+export const ExpandedTableRow = styled.tr`
+  background: ${secondaryBgColor};
+  td {
+    padding: 0px;
+    border: ${mainBorder};
+    border-radius: 4px;
+  }
+`

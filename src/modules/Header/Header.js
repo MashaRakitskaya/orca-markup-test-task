@@ -7,7 +7,7 @@ import group from 'images/group.svg'
 import sort from 'images/sort.svg'
 import SwitchButton from 'components/SwitchButton/SwitchButton'
 
-const Header = () => {
+const Header = ({ isToggle, toggleSwitchButton }) => {
   return (
     <HeaderStyled>
       <Logo />
@@ -37,7 +37,7 @@ const Header = () => {
             { name: 'Scan source', id: '5' },
           ]}
         ></DropDown>
-        <SwitchButton />
+        <SwitchButton isToggle={isToggle} toggleSwitchButton={toggleSwitchButton} />
       </Filters>
     </HeaderStyled>
   )

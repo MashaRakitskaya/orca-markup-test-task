@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   SwitchButtonImgLeft,
   SwitchButtonImgRight,
@@ -8,10 +8,7 @@ import SVG from 'react-inlinesvg'
 import table from 'images/table.svg'
 import cards from 'images/cards.svg'
 
-const SwitchButton = () => {
-  const [isToggle, setToggle] = useState(false)
-
-  const toggleSwitchButton = () => setToggle(!isToggle)
+const SwitchButton = ({ isToggle, toggleSwitchButton }) => {
   return (
     <SwitchButtonWrapper isToggle={isToggle} onClick={toggleSwitchButton}>
       <SwitchButtonImgLeft isToggle={isToggle}>

@@ -9,7 +9,7 @@ export const tableHeaderData = [
 export const tableRowsData = [
   {
     id: '1',
-    severity: 'critical',
+    severity: 'Critical',
     name: 'Luctus',
     fileName: 'Luctus.ppt',
     fileSize: '2Mb',
@@ -21,7 +21,7 @@ export const tableRowsData = [
   },
   {
     id: '2',
-    severity: 'high',
+    severity: 'High',
     name: 'Ante',
     fileName: 'Ante.tiff',
     fileSize: '10Mb',
@@ -33,7 +33,7 @@ export const tableRowsData = [
   },
   {
     id: '3',
-    severity: 'high',
+    severity: 'High',
     name: 'ElitProinInterdum',
     fileName: 'ElitProinInterdum.xls',
     fileSize: '3Mb',
@@ -45,7 +45,7 @@ export const tableRowsData = [
   },
   {
     id: '4',
-    severity: 'medium',
+    severity: 'Medium',
     name: 'Non',
     fileName: 'Non.ppt',
     fileSize: '536Kb',
