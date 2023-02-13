@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/orca-markup-test-task/static/js/main.bcbb9b68.js",
+    "static/media/logo.svg": "/orca-markup-test-task/static/media/logo.5afd6064dc1f3ca7e2f63f456df662c7.svg",
+    "static/media/radar.svg": "/orca-markup-test-task/static/media/radar.caba52e11e9d4c4e75773ccfa020c251.svg",
+    "static/media/chain.svg": "/orca-markup-test-task/static/media/chain.b73a9e215af81c51b8485f649299e35a.svg",
+    "static/media/cards.svg": "/orca-markup-test-task/static/media/cards.5ba11600fa018cd902f1dca265d3401d.svg",
+    "static/media/checkmark.svg": "/orca-markup-test-task/static/media/checkmark.7c9ddf90852e522a2f6ad9849afce1b6.svg",
+    "static/media/download.svg": "/orca-markup-test-task/static/media/download.ab76cb4ee94c26dc94b36ce97625d18e.svg",
+    "static/media/criticalseverity.svg": "/orca-markup-test-task/static/media/criticalseverity.d54842342c04e41d811fadbcbec4e337.svg",
+    "static/media/sort.svg": "/orca-markup-test-task/static/media/sort.f6623683a77043220eb8ca385792e2c1.svg",
+    "index.html": "/orca-markup-test-task/index.html",
+    "static/media/highseverity.svg": "/orca-markup-test-task/static/media/highseverity.09257b152d28ae71431f0a9c15424437.svg",
+    "static/media/group.svg": "/orca-markup-test-task/static/media/group.2d4889e1f4915c8c8288664815ee074b.svg",
+    "static/media/mediumseverity.svg": "/orca-markup-test-task/static/media/mediumseverity.45a8391c42315d5be55bdfcaa062e2a3.svg",
+    "static/media/close.svg": "/orca-markup-test-task/static/media/close.075e74320ebdc8382ce5171f3d30610e.svg",
+    "static/media/copy.svg": "/orca-markup-test-task/static/media/copy.af4198d5958d080ef5801baaf4d1f12e.svg",
+    "static/media/dropdownarrow.svg": "/orca-markup-test-task/static/media/dropdownarrow.0a3e93fdac658f7e46f6b032bfb04c1f.svg",
+    "static/media/table.svg": "/orca-markup-test-task/static/media/table.54127e0f05fe77b327c9481034262257.svg",
+    "main.bcbb9b68.js.map": "/orca-markup-test-task/static/js/main.bcbb9b68.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bcbb9b68.js"
+  ]
+}
