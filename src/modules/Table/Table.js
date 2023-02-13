@@ -30,6 +30,7 @@ const Table = () => {
               additionalInfo,
             }) => (
               <TableRow
+                key={`${id}tableRow`}
                 id={id}
                 name={name}
                 severity={severity}
