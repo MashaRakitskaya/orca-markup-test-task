@@ -15,9 +15,11 @@ export const ButtonStyled = styled.button`
   line-height: 18px;
   color: ${({ secondary }) => (secondary ? `${mainFontColor}` : `${mainButtonFontColor}`)};
   padding: 6px 8px;
+  padding: ${({ isBigPudding }) => (isBigPudding ? '6px 32px' : '6px 8px')};
+
   cursor: pointer;
 
   &:hover {
-    box-shadow: ${mainBoxShadow};
+    box-shadow: ${({ secondary }) => (secondary ? '' : `${mainBoxShadow}`)};
   }
 `
