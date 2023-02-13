@@ -4,9 +4,9 @@ import chain from 'images/chain.svg'
 import SVG from 'react-inlinesvg'
 import { ScanSourceAnchorWrapper } from './ScanSourceAnchor.styles'
 
-const ScanSourceAnchor = ({ url }) => {
+const ScanSourceAnchor = ({ url, secondary = false }) => {
   return (
-    <ScanSourceAnchorWrapper>
+    <ScanSourceAnchorWrapper secondary={secondary}>
       <SVG src={radar} alt="radar" />
       <a href={url} target="_blank" rel="noopener noreferrer">
         {url}
