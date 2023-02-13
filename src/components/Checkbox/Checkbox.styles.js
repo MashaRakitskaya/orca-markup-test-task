@@ -60,5 +60,6 @@ export const CheckboxContainer = styled.div`
     border-radius: 2px;
     margin: auto;
     margin-right: 8px;
+    background: #fdfdff;
   }
 `
