@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const AdditionalInfoWithScrollbar = () => `
-height: 208px;
+height: 150px;
 overflow: auto;
 
 ::-webkit-scrollbar {
@@ -23,8 +23,8 @@ overflow: auto;
 `
 
 export const AdditionalInfoWrapper = styled.div`
+  ${({ secondary }) => (secondary ? '' : `${AdditionalInfoWithScrollbar()}`)};
   padding: ${({ secondary }) => (secondary ? '24px 24px 0 24px' : '24px 32px')};
-  ${({ secondary }) => (secondary ? '' : `${AdditionalInfoWithScrollbar()}`)}
 `
 export const ButtonDropDownWrapper = styled.div`
   display: flex;
