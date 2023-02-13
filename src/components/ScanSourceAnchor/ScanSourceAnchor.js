@@ -7,7 +7,7 @@ import { ScanSourceAnchorSvgContainer, ScanSourceAnchorWrapper } from './ScanSou
 const ScanSourceAnchor = ({ url, secondary = false }) => {
   return (
     <ScanSourceAnchorWrapper secondary={secondary}>
-      <SVG secondary={secondary} src={radar} alt="radar" />
+      <SVG src={radar} alt="radar" />
       <ScanSourceAnchorSvgContainer secondary={secondary}>
         <a href={url} target="_blank" rel="noopener noreferrer">
           {url}

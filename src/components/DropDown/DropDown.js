@@ -35,10 +35,10 @@ const DropDown = ({
         </DropDownArrowWrapper>
       </DropDownButton>
       {isOpen && (
-        <DropDownListContainer>
+        <DropDownListContainer secondary={secondary}>
           <DropDownList>
             {options.map(({ name, id }) => (
-              <DropDownListItem onClick={onDropDownListItemClick} key={id}>
+              <DropDownListItem secondary={secondary} onClick={onDropDownListItemClick} key={id}>
                 {name}
               </DropDownListItem>
             ))}

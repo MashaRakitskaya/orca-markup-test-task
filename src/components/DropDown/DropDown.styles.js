@@ -8,7 +8,12 @@ import {
   mainTransition,
   secondaryFontColor,
   fillImgColor,
+  mainBoxShadow,
 } from 'styles/variables.styles'
+
+export const DropDownListOpensUp = () => `
+  top: -120px;
+`
 
 export const DropDownContainer = styled.div`
   position: relative;
@@ -21,7 +26,6 @@ export const DropDownButton = styled.button`
   justify-content: center;
   padding: 6px 8px;
   height: 30px;
-
   background-color: ${({ secondary }) => (secondary ? `${mainColor}` : `${secondaryBgColor}`)};
   border: ${({ secondary }) => (secondary ? 'none' : `${mainBorder}`)};
   border-radius: 4px;
@@ -47,6 +51,7 @@ export const DropDownButton = styled.button`
   }
 
   &:hover {
+    box-shadow: ${({ secondary }) => (secondary ? `${mainBoxShadow}` : '')};
     & SVG {
       path {
         transition-property: fill;
@@ -58,6 +63,7 @@ export const DropDownButton = styled.button`
 export const DropDownListContainer = styled.div`
   position: absolute;
   right: 0px;
+  ${({ secondary }) => (secondary ? `${DropDownListOpensUp()}` : '')};
 `
 export const DropDownList = styled.ul`
   weight: 100%;
@@ -77,7 +83,7 @@ export const DropDownListItem = styled.li`
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 16px;
-  padding-right: 16px;
+  padding-right: ${({ secondary }) => (secondary ? '55px' : '16px')};
   cursor: pointer;
   ${mainTransition({ property: 'background-color' })};
 

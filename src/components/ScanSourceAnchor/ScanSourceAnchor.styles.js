@@ -19,7 +19,7 @@ export const ScanSourceAnchorWrapper = styled.div`
 
 export const ScanSourceAnchorSvgContainer = styled.div`
   width: ${({ secondary }) => (secondary ? '177px' : '')};
-  ${({ secondary }) => (secondary ? `${cardsAnchorOverflow()}` : '')}
+  ${({ secondary }) => (secondary ? `${cardsAnchorOverflow()}` : '')};
 
   a {
     ${mainTransition({ property: 'color' })}
