@@ -3,7 +3,13 @@ import React, { useState } from 'react'
 import CopyButton from 'components/CopyButton/CopyButton'
 import ScanSourceAnchor from 'components/ScanSourceAnchor/ScanSourceAnchor'
 import FileNameAndSize from 'components/FileNameAndSize/FileNameAndSize'
-import { ExpandedTableRow, TableRowEmpty, TableRowStyled } from './TableRow.styles'
+import {
+  ExpandedTableDataCell,
+  ExpandedTableRow,
+  TableDataCell,
+  TableRowEmpty,
+  TableRowStyled,
+} from './TableRow.styles'
 import AdditionalInfo from 'components/AdditionalInfo/AdditionalInfo'
 import { getSeverityIcon } from 'utils/utils'
 
@@ -25,27 +31,27 @@ const TableRow = ({
   return (
     <>
       <TableRowStyled onClick={toggleExpandedTr}>
-        <td>{getSeverityIcon(severity)}</td>
-        <td>{name}</td>
-        <td>
+        <TableDataCell>{getSeverityIcon(severity)}</TableDataCell>
+        <TableDataCell>{name}</TableDataCell>
+        <TableDataCell>
           <FileNameAndSize fileName={fileName} fileSize={fileSize} />
-        </td>
-        <td>
+        </TableDataCell>
+        <TableDataCell>
           <CopyButton ipAddressType={ipAddressV4}></CopyButton>
-        </td>
-        <td>
+        </TableDataCell>
+        <TableDataCell>
           <CopyButton ipAddressType={ipAddressV6}></CopyButton>
-        </td>
-        <td>
+        </TableDataCell>
+        <TableDataCell>
           <ScanSourceAnchor url={scanSource}></ScanSourceAnchor>
-        </td>
+        </TableDataCell>
       </TableRowStyled>
 
       {isExpanded && (
         <ExpandedTableRow>
-          <td colSpan="6">
+          <ExpandedTableDataCell colSpan="6">
             <AdditionalInfo id={id} additionalInfo={additionalInfo} />
-          </td>
+          </ExpandedTableDataCell>
         </ExpandedTableRow>
       )}
       <TableRowEmpty />

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { mainBorder, fillImgColor, mainTransition } from 'styles/variables.styles'
+import { mainBorder, fillImgColor, mainTransition, mainFontColor } from 'styles/variables.styles'
 import SVG from 'react-inlinesvg'
 
 export const StyledSVG = styled(SVG)`
@@ -37,4 +37,9 @@ export const ButtonText = styled.p`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: ${mainFontColor};
+  margin: 0px;
 `

@@ -4,9 +4,12 @@ import {
   CardDataContainer,
   CardItemStyled,
   CopyButtonsScanSourceContainer,
+  Name,
   Names,
   NamesValuesContainer,
+  NamesValuesContainerWithMarginTop,
   SeveritySvgTextContainer,
+  Value,
   Values,
 } from './CardItem.styles'
 import Button from 'components/Button/Button'
@@ -31,26 +34,26 @@ const CardItem = ({
     <>
       <CardItemStyled>
         <CardDataContainer>
-          <NamesValuesContainer style={{ marginTop: '4px' }}>
+          <NamesValuesContainerWithMarginTop>
             <Names>
-              <p>Risk level:</p>
-              <p>Name:</p>
-              <p>File name:</p>
+              <Name>Risk level:</Name>
+              <Name>Name:</Name>
+              <Name>File name:</Name>
             </Names>
             <Values>
               <SeveritySvgTextContainer>
                 {getSeverityIcon(severity)}
-                <p>{severity}</p>
+                <Value>{severity}</Value>
               </SeveritySvgTextContainer>
-              <p>{name}</p>
+              <Value>{name}</Value>
               <FileNameAndSize secondary={true} fileName={fileName} fileSize={fileSize} />
             </Values>
-          </NamesValuesContainer>
+          </NamesValuesContainerWithMarginTop>
           <NamesValuesContainer>
             <Names>
-              <p>IP Address v4:</p>
-              <p>IP Address v6:</p>
-              <p>Scan source:</p>
+              <Name>IP Address v4:</Name>
+              <Name>IP Address v6:</Name>
+              <Name>Scan source:</Name>
             </Names>
             <CopyButtonsScanSourceContainer>
               <CopyButton ipAddressType={ipAddressV4} />

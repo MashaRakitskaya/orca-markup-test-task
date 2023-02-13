@@ -9,18 +9,12 @@ import {
   mainTransition,
 } from 'styles/variables.styles'
 
-export const TableRowStyled = styled.tr`
-  height: 60px;
-  background: ${secondaryBgColor};
-  ${mainTransition({ property: 'background' })}
+export const TableDataCell = styled.td`
+  padding: 0px;
+  border-bottom: ${mainBorder};
+  border-top: ${mainBorder};
 
-  td {
-    padding: 0px;
-    border-bottom: ${mainBorder};
-    border-top: ${mainBorder};
-  }
-
-  td:first-child {
+  &:first-child {
     border-radius: 4px 0 0 4px;
     padding-left: 32px;
     padding-right: 42px;
@@ -28,10 +22,16 @@ export const TableRowStyled = styled.tr`
     width: 24px;
   }
 
-  td:last-child {
+  &:last-child {
     border-radius: 0 4px 4px 0;
     border-right: ${mainBorder};
   }
+`
+
+export const TableRowStyled = styled.tr`
+  height: 60px;
+  background: ${secondaryBgColor};
+  ${mainTransition({ property: 'background' })}
 
   &:hover {
     cursor: pointer;
@@ -53,14 +53,15 @@ export const TableRowStyled = styled.tr`
   }
 `
 
+export const ExpandedTableDataCell = styled.td`
+  padding: 0px;
+  border: ${mainBorder};
+  border-top: none;
+  border-radius: 4px;
+`
+
 export const ExpandedTableRow = styled.tr`
   background: ${secondaryBgColor};
-  td {
-    padding: 0px;
-    border: ${mainBorder};
-    border-top: none;
-    border-radius: 4px;
-  }
 `
 
 export const TableRowEmpty = styled.tr`

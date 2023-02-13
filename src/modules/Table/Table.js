@@ -1,5 +1,5 @@
 import React from 'react'
-import { TableStyled } from './Table.styles'
+import { TableHeaderCell, TableStyled } from './Table.styles'
 
 import TableRow from 'components/TableRow/TableRow'
 import { tableRowsData, tableHeaderData } from 'utils/constants'
@@ -12,7 +12,7 @@ const Table = () => {
           <tr>
             <th>{/*Intentionally Blank*/}</th>
             {tableHeaderData.map(({ title, id }) => (
-              <th key={id}>{title}</th>
+              <TableHeaderCell key={id}>{title}</TableHeaderCell>
             ))}
           </tr>
         </thead>

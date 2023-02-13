@@ -3,7 +3,7 @@ import {
   AdditionalInfoText,
   AdditionalInfoTitle,
   AdditionalInfoWrapper,
-  ButtonDropDownWrapper,
+  ButtonsDropDownWrapper,
 } from './AdditionalInfo.styles'
 import Button from 'components/Button/Button'
 import DropDown from 'components/DropDown/DropDown'
@@ -14,7 +14,7 @@ const AdditionalInfo = ({ additionalInfo, secondary = false }) => {
     <AdditionalInfoWrapper secondary={secondary}>
       <AdditionalInfoTitle>Additional info</AdditionalInfoTitle>
       <AdditionalInfoText>{additionalInfo}</AdditionalInfoText>
-      <ButtonDropDownWrapper>
+      <ButtonsDropDownWrapper>
         <Button buttonText={'Download'} />
         <DropDown
           secondary={true}
@@ -29,7 +29,7 @@ const AdditionalInfo = ({ additionalInfo, secondary = false }) => {
           ]}
         />
         {secondary && <Button secondary={true} buttonText={'Cancel'} />}
-      </ButtonDropDownWrapper>
+      </ButtonsDropDownWrapper>
     </AdditionalInfoWrapper>
   )
 }

@@ -12,14 +12,14 @@ export const TableStyled = styled.table`
     font-size: 14px;
     line-height: 18px;
   }
+`
 
-  th {
-    padding: 0px;
-    padding-bottom: 8px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: ${headerFontColor};
-    text-align: start;
-  }
+export const TableHeaderCell = styled.th`
+  padding: 0px;
+  padding-bottom: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: ${headerFontColor};
+  text-align: start;
 `

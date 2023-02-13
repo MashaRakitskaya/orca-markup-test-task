@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
   mainFontColor,
   secondaryBgColor,
@@ -11,7 +11,7 @@ import {
   mainBoxShadow,
 } from 'styles/variables.styles'
 
-export const DropDownListOpensUp = () => `
+export const DropDownListOpensUp = () => css`
   top: -120px;
 `
 
@@ -34,15 +34,6 @@ export const DropDownButton = styled.button`
       ? `${mainTransition({ property: 'box-shadow' })}`
       : `${mainTransition({ property: 'border-color' })}`};
 
-  p {
-    margin: 0 8px 0 8px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    white-space: nowrap;
-    color: ${({ secondary }) => (secondary ? `${secondaryFontColor}` : `${mainFontColor}`)};
-  }
-
   SVG {
     path {
       ${mainTransition({ property: 'fill' })};
@@ -59,6 +50,15 @@ export const DropDownButton = styled.button`
       }
     }
   }
+`
+
+export const DropDownTitle = styled.p`
+  margin: 0 8px 0 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+  color: ${({ secondary }) => (secondary ? `${secondaryFontColor}` : `${mainFontColor}`)};
 `
 export const DropDownListContainer = styled.div`
   position: absolute;

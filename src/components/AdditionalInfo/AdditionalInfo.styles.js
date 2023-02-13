@@ -1,32 +1,33 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { headerFontColor, mainBorder, mainFontColor } from 'styles/variables.styles'
 
-export const AdditionalInfoWithScrollbar = () => `
-height: 150px;
-overflow: auto;
+export const AdditionalInfoWithScrollbar = () => css`
+  height: 150px;
+  overflow: auto;
 
-::-webkit-scrollbar {
-  width: 12px;
-}
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
 
-::-webkit-scrollbar-track {
-  background: #f8f8f8;
-  border-left: 1px solid #cacfdb;
-  border-radius: 0px 0px 3px 0px;
-}
+  ::-webkit-scrollbar-track {
+    background: #f8f8f8;
+    border-left: ${mainBorder};
+    border-radius: 0px 0px 3px 0px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background-color: #b5b5bd;
-  border: 3px solid transparent;
-  border-radius: 9px;
-  background-clip: content-box;
-}
+  ::-webkit-scrollbar-thumb {
+    background-color: #b5b5bd;
+    border: 3px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+  }
 `
 
 export const AdditionalInfoWrapper = styled.div`
   ${({ secondary }) => (secondary ? '' : `${AdditionalInfoWithScrollbar()}`)};
-  padding: ${({ secondary }) => (secondary ? '24px 24px 0 24px' : '24px 32px')};
+  padding: ${({ secondary }) => (secondary ? '24px 24px 0px 24px' : '24px 32px')};
 `
-export const ButtonDropDownWrapper = styled.div`
+export const ButtonsDropDownWrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: flex-end;
@@ -40,7 +41,7 @@ export const AdditionalInfoTitle = styled.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  color: #70707b;
+  color: ${headerFontColor};
 `
 
 export const AdditionalInfoText = styled.p`
@@ -48,6 +49,6 @@ export const AdditionalInfoText = styled.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  color: #10111d;
+  color: ${mainFontColor};
   word-wrap: break-word;
 `

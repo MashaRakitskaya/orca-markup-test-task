@@ -26,47 +26,42 @@ export const NamesValuesContainer = styled.div`
   gap: 10px;
 `
 
+export const NamesValuesContainerWithMarginTop = styled(NamesValuesContainer)`
+  margin-top: 4px;
+`
+
 export const Names = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-
-  p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: ${headerFontColor};
-    margin: 0px;
-    white-space: nowrap;
-  }
+`
+export const Name = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: ${headerFontColor};
+  margin: 0px;
+  white-space: nowrap;
 `
 
 export const Values = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+`
 
-  p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: ${mainFontColor};
-    margin: 0px;
-  }
+export const Value = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: ${mainFontColor};
+  margin: 0px;
 `
 
 export const CopyButtonsScanSourceContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-
-  p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: ${mainFontColor};
-    margin: 0px;
-  }
 `
 
 export const SeveritySvgTextContainer = styled.div`

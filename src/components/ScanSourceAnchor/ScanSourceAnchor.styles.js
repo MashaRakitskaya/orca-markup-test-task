@@ -1,9 +1,18 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { fillImgColor, mainColor, mainTransition, mainFontColor } from 'styles/variables.styles'
 
-export const cardsAnchorOverflow = () => `
+export const cardsAnchorOverflow = () => css`
   word-wrap: break-word;
+`
+
+export const Anchor = styled.a`
+  ${mainTransition({ property: 'color' })}
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: ${mainFontColor};
 `
 
 export const ScanSourceAnchorWrapper = styled.div`
@@ -21,15 +30,6 @@ export const ScanSourceAnchorSvgContainer = styled.div`
   width: ${({ secondary }) => (secondary ? '177px' : '')};
   ${({ secondary }) => (secondary ? `${cardsAnchorOverflow()}` : '')};
 
-  a {
-    ${mainTransition({ property: 'color' })}
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: ${mainFontColor};
-  }
-
   SVG {
     margin-left: 4px;
     path {
@@ -38,7 +38,7 @@ export const ScanSourceAnchorSvgContainer = styled.div`
   }
 
   &:hover {
-    a {
+    ${Anchor} {
       color: ${mainColor};
     }
 
