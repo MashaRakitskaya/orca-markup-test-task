@@ -4,10 +4,11 @@ import {
   mainButtonFontColor,
   mainFontColor,
   mainBoxShadow,
+  mainBorder,
 } from 'styles/variables.styles'
 
 export const ButtonStyled = styled.button`
-  border: ${({ secondary }) => (secondary ? '1px solid #cacfdb' : 'none')};
+  border: ${({ secondary }) => (secondary ? `${mainBorder}` : 'none')};
   background: ${({ secondary }) => (secondary ? 'transparent' : `${mainColor}`)};
   border-radius: 4px;
   font-weight: 400;
@@ -16,7 +17,6 @@ export const ButtonStyled = styled.button`
   color: ${({ secondary }) => (secondary ? `${mainFontColor}` : `${mainButtonFontColor}`)};
   padding: 6px 8px;
   padding: ${({ isBigPudding }) => (isBigPudding ? '6px 32px' : '6px 8px')};
-
   cursor: pointer;
 
   &:hover {

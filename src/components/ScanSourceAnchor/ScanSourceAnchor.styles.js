@@ -1,39 +1,48 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { fillImgColor, mainColor, mainTransition, mainFontColor } from 'styles/variables.styles'
 
-export const cardsAnchorOverflow = () => `
-width: 168px;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
+export const cardsAnchorOverflow = () => css`
+  word-wrap: break-word;
+`
+
+export const Anchor = styled.a`
+  ${mainTransition({ property: 'color' })}
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: ${mainFontColor};
 `
 
 export const ScanSourceAnchorWrapper = styled.div`
   display: flex;
-  align-items: center;
   gap: 4px;
   cursor: pointer;
+  align-items: ${({ secondary }) => (secondary ? 'flex-start' : 'center')};
 
-  a {
-    color: ${mainFontColor};
-    ${mainTransition({ property: 'color' })}
-    text-decoration: none;
-    ${({ secondary }) => (secondary ? `${cardsAnchorOverflow()}` : '')}
+  SVG {
+    padding-top: ${({ secondary }) => (secondary ? '3px' : '0')};
   }
+`
 
-  SVG:last-child {
+export const ScanSourceAnchorSvgContainer = styled.div`
+  width: ${({ secondary }) => (secondary ? '177px' : '')};
+  ${({ secondary }) => (secondary ? `${cardsAnchorOverflow()}` : '')};
+
+  SVG {
+    margin-left: 4px;
     path {
       ${mainTransition({ property: 'fill' })}
     }
   }
 
   &:hover {
-    a {
+    ${Anchor} {
       color: ${mainColor};
     }
 
-    SVG:last-child {
+    &:last-child SVG {
       path {
         fill: ${fillImgColor.blue};
       }

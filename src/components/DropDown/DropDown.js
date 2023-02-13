@@ -6,6 +6,7 @@ import {
   DropDownListContainer,
   DropDownListItem,
   DropDownArrowWrapper,
+  DropDownTitle,
 } from 'components/DropDown/DropDown.styles'
 import dropdownArrow from 'images/dropdownarrow.svg'
 import SVG from 'react-inlinesvg'
@@ -29,16 +30,16 @@ const DropDown = ({
     <DropDownContainer>
       <DropDownButton secondary={secondary} onClick={toggleDropDown}>
         <SVG src={DropDownButtonImg} alt={DropDownButtonImgAlt}></SVG>
-        <p>{DropDownButtonTitle}</p>
+        <DropDownTitle secondary={secondary}>{DropDownButtonTitle}</DropDownTitle>
         <DropDownArrowWrapper isOpen={isOpen}>
           <SVG src={dropdownArrow} alt="dropdown arrow"></SVG>
         </DropDownArrowWrapper>
       </DropDownButton>
       {isOpen && (
-        <DropDownListContainer>
+        <DropDownListContainer secondary={secondary}>
           <DropDownList>
             {options.map(({ name, id }) => (
-              <DropDownListItem onClick={onDropDownListItemClick} key={id}>
+              <DropDownListItem secondary={secondary} onClick={onDropDownListItemClick} key={id}>
                 {name}
               </DropDownListItem>
             ))}

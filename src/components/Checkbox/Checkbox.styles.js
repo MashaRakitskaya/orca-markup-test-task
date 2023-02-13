@@ -13,46 +13,25 @@ export const CheckboxContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+`
 
-  input {
-    cursor: pointer;
-    opacity: 0;
-    position: absolute;
-  }
+export const Label = styled.label`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+  color: ${mainFontColor};
+  cursor: pointer;
+  display: flex;
 
-  input:checked {
-    & + label::before {
-      content: '';
-      background: ${({ checkmark }) => checkmark} no-repeat 50%;
-      background-size: 8px 6px;
-      background-color: ${mainColor};
+  &:hover {
+    &::before {
+      ${mainTransition({ property: 'border-color' })}
+      border:${mainBorderHover};
     }
   }
 
-  input:focus {
-    & + label::before {
-      box-shadow: 0px 0px 0px 2px #e1eefd;
-    }
-  }
-
-  label {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    white-space: nowrap;
-    color: ${mainFontColor};
-    cursor: pointer;
-    display: flex;
-
-    &:hover {
-      &::before {
-        ${mainTransition({ property: 'border-color' })}
-        border:${mainBorderHover};
-      }
-    }
-  }
-
-  label::before {
+  &::before {
     content: '';
     border: ${mainBorder};
     width: 12px;
@@ -60,5 +39,27 @@ export const CheckboxContainer = styled.div`
     border-radius: 2px;
     margin: auto;
     margin-right: 8px;
+    background: #fdfdff;
+  }
+`
+
+export const Input = styled.input`
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+
+  &:checked {
+    & + ${Label}::before {
+      content: '';
+      background: ${({ checkmark }) => checkmark} no-repeat 50%;
+      background-size: 8px 6px;
+      background-color: ${mainColor};
+    }
+  }
+
+  &:focus {
+    & + ${Label}::before {
+      box-shadow: 0px 0px 0px 2px #e1eefd;
+    }
   }
 `

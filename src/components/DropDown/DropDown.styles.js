@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
   mainFontColor,
   secondaryBgColor,
@@ -8,7 +8,12 @@ import {
   mainTransition,
   secondaryFontColor,
   fillImgColor,
+  mainBoxShadow,
 } from 'styles/variables.styles'
+
+export const DropDownListOpensUp = () => css`
+  top: -120px;
+`
 
 export const DropDownContainer = styled.div`
   position: relative;
@@ -21,22 +26,13 @@ export const DropDownButton = styled.button`
   justify-content: center;
   padding: 6px 8px;
   height: 30px;
-  background-color: ${({ secondary }) => (secondary ? `${mainColor}` : 'transparent')};
+  background-color: ${({ secondary }) => (secondary ? `${mainColor}` : `${secondaryBgColor}`)};
   border: ${({ secondary }) => (secondary ? 'none' : `${mainBorder}`)};
   border-radius: 4px;
   ${({ secondary }) =>
     secondary
       ? `${mainTransition({ property: 'box-shadow' })}`
       : `${mainTransition({ property: 'border-color' })}`};
-
-  p {
-    margin: 0 8px 0 8px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    white-space: nowrap;
-    color: ${({ secondary }) => (secondary ? `${secondaryFontColor}` : `${mainFontColor}`)};
-  }
 
   SVG {
     path {
@@ -46,6 +42,7 @@ export const DropDownButton = styled.button`
   }
 
   &:hover {
+    box-shadow: ${({ secondary }) => (secondary ? `${mainBoxShadow}` : '')};
     & SVG {
       path {
         transition-property: fill;
@@ -54,9 +51,19 @@ export const DropDownButton = styled.button`
     }
   }
 `
+
+export const DropDownTitle = styled.p`
+  margin: 0 8px 0 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+  color: ${({ secondary }) => (secondary ? `${secondaryFontColor}` : `${mainFontColor}`)};
+`
 export const DropDownListContainer = styled.div`
   position: absolute;
   right: 0px;
+  ${({ secondary }) => (secondary ? `${DropDownListOpensUp()}` : '')};
 `
 export const DropDownList = styled.ul`
   weight: 100%;
@@ -76,7 +83,7 @@ export const DropDownListItem = styled.li`
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 16px;
-  padding-right: 16px;
+  padding-right: ${({ secondary }) => (secondary ? '55px' : '16px')};
   cursor: pointer;
   ${mainTransition({ property: 'background-color' })};
 
