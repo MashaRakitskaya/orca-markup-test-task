@@ -13,6 +13,18 @@ export const Anchor = styled.a`
   font-size: 14px;
   line-height: 18px;
   color: ${mainFontColor};
+
+  &:hover {
+    color: ${mainColor};
+  }
+
+  &:visited {
+    color: ${mainColor};
+  }
+
+  &:active {
+    color: ${mainColor};
+  }
 `
 
 export const ScanSourceAnchorWrapper = styled.div`
