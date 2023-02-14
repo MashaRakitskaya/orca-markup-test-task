@@ -20,6 +20,8 @@ export const TableDataCell = styled.td`
     padding-right: 42px;
     border-left: ${mainBorder};
     width: 24px;
+    height: 24px;
+    margin: 18px 0 18px 0;
   }
 
   &:last-child {
