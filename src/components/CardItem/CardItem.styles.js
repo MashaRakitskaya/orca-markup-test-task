@@ -5,6 +5,7 @@ import {
   headerFontColor,
   mainFontColor,
   fillImgColor,
+  mainFontStyles,
 } from 'styles/variables.styles'
 
 export const CardItemStyled = styled.article`
@@ -12,6 +13,9 @@ export const CardItemStyled = styled.article`
   padding: 20px 32px;
   border: ${mainBorder};
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 export const CardDataContainer = styled.div`
@@ -35,10 +39,12 @@ export const Names = styled.div`
   flex-direction: column;
   gap: 16px;
 `
+
+export const NamesWithMarginTop = styled(Names)`
+  margin-top: 4px;
+`
 export const Name = styled.p`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   color: ${headerFontColor};
   margin: 0px;
   white-space: nowrap;
@@ -51,9 +57,7 @@ export const Values = styled.div`
 `
 
 export const Value = styled.p`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   color: ${mainFontColor};
   margin: 0px;
 `

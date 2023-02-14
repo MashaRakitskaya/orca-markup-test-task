@@ -8,6 +8,7 @@ import {
   Names,
   NamesValuesContainer,
   NamesValuesContainerWithMarginTop,
+  NamesWithMarginTop,
   SeveritySvgTextContainer,
   Value,
   Values,
@@ -50,11 +51,11 @@ const CardItem = ({
             </Values>
           </NamesValuesContainerWithMarginTop>
           <NamesValuesContainer>
-            <Names>
+            <NamesWithMarginTop>
               <Name>IP Address v4:</Name>
               <Name>IP Address v6:</Name>
               <Name>Scan source:</Name>
-            </Names>
+            </NamesWithMarginTop>
             <CopyButtonsScanSourceContainer>
               <CopyButton ipAddressType={ipAddressV4} />
               <CopyButton ipAddressType={ipAddressV6} />

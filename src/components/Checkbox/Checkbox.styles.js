@@ -5,20 +5,19 @@ import {
   mainBorder,
   mainBorderHover,
   mainTransition,
+  mainFontStyles,
 } from 'styles/variables.styles'
 
 export const CheckboxContainer = styled.div`
   weight: 164px;
-  height: auto;
+  height: 18px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 `
 
 export const Label = styled.label`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   white-space: nowrap;
   color: ${mainFontColor};
   cursor: pointer;
@@ -33,6 +32,7 @@ export const Label = styled.label`
 
   &::before {
     content: '';
+    box-sizing: border-box;
     border: ${mainBorder};
     width: 12px;
     height: 12px;

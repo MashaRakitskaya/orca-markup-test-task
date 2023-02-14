@@ -5,7 +5,9 @@ import {
   secondaryBgColor,
   mainFontColor,
   mainBorder,
+  fillImgColor,
 } from 'styles/variables.styles'
+import SVG from 'react-inlinesvg'
 
 export const ModalWindowContent = styled.div`
   background: ${secondaryBgColor};
@@ -59,16 +61,19 @@ export const ButtonClose = styled.button`
     opacity: 0.8;
   }
 `
-
 export const ModalTitleSvgContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 24px;
   border-bottom: ${mainBorder};
-
-  SVG {
-    width: 32px;
-    height: 32px;
+`
+export const SvgIconForPopupStyled = styled(SVG)`
+  background-color: ${({ color }) => color};
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  path {
+    fill: ${fillImgColor.white};
   }
 `

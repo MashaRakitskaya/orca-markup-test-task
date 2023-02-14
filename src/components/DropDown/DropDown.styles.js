@@ -9,6 +9,8 @@ import {
   secondaryFontColor,
   fillImgColor,
   mainBoxShadow,
+  mainFontStyles,
+  blueBorderHover,
 } from 'styles/variables.styles'
 
 export const DropDownListOpensUp = () => css`
@@ -42,6 +44,7 @@ export const DropDownButton = styled.button`
   }
 
   &:hover {
+    border: ${({ secondary }) => (secondary ? 'none' : `${blueBorderHover}`)};
     box-shadow: ${({ secondary }) => (secondary ? `${mainBoxShadow}` : '')};
     & SVG {
       path {
@@ -54,9 +57,7 @@ export const DropDownButton = styled.button`
 
 export const DropDownTitle = styled.p`
   margin: 0 8px 0 8px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   white-space: nowrap;
   color: ${({ secondary }) => (secondary ? `${secondaryFontColor}` : `${mainFontColor}`)};
 `
@@ -72,9 +73,7 @@ export const DropDownList = styled.ul`
   background-color: ${secondaryBgColor};
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   color: ${mainFontColor};
 `
 export const DropDownListItem = styled.li`

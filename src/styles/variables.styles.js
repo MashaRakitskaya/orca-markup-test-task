@@ -1,3 +1,5 @@
+import { css } from 'styled-components'
+
 export const mainFontFamily = `'Mulish', sans-serif;`
 
 export const mainFontColor = `#10111d;`
@@ -24,6 +26,8 @@ export const mainBorder = `1px solid #cacfdb;`
 
 export const mainBorderHover = `1px solid rgba(0, 128, 255, 1);`
 
+export const blueBorderHover = `1px solid #0080ff;`
+
 export const mainTransition = ({ property }) => `
 transition-duration: 0.3s;
 transition-property: ${property};
@@ -32,4 +36,12 @@ transition-timing-function: ease;
 
 export const fillImgColor = { blue: '#0080ff', white: '#ffffff', dark: '#10111d', gray: '#cacfdb' }
 
+export const imgColorType = { red: '#E2005E', orange: '#FE7B1F', yellow: '#F8CD39' }
+
 export const mainBoxShadow = `0px 0px 0px 2px #e1eefd`
+
+export const mainFontStyles = css`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+`

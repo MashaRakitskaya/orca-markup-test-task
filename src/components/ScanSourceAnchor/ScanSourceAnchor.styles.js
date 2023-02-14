@@ -1,6 +1,12 @@
 import styled, { css } from 'styled-components'
 
-import { fillImgColor, mainColor, mainTransition, mainFontColor } from 'styles/variables.styles'
+import {
+  fillImgColor,
+  mainColor,
+  mainTransition,
+  mainFontColor,
+  mainFontStyles,
+} from 'styles/variables.styles'
 
 export const cardsAnchorOverflow = () => css`
   word-wrap: break-word;
@@ -9,10 +15,20 @@ export const cardsAnchorOverflow = () => css`
 export const Anchor = styled.a`
   ${mainTransition({ property: 'color' })}
   text-decoration: none;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   color: ${mainFontColor};
+
+  &:hover {
+    color: ${mainColor};
+  }
+
+  &:visited {
+    color: ${mainColor};
+  }
+
+  &:active {
+    color: ${mainColor};
+  }
 `
 
 export const ScanSourceAnchorWrapper = styled.div`
