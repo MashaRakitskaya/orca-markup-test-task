@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { headerFontColor } from 'styles/variables.styles'
+import { headerFontColor, mainFontStyles } from 'styles/variables.styles'
 
 export const TableStyled = styled.table`
   border-collapse: separate;
@@ -8,18 +8,14 @@ export const TableStyled = styled.table`
   table-layout: auto;
 
   * {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
+    ${mainFontStyles};
   }
 `
 
 export const TableHeaderCell = styled.th`
   padding: 0px;
   padding-bottom: 8px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   color: ${headerFontColor};
   text-align: start;
 `

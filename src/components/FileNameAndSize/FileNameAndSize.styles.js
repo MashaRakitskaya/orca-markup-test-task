@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { mainFontColor, secondaryColor } from 'styles/variables.styles'
+import { mainFontColor, mainFontStyles, secondaryColor } from 'styles/variables.styles'
 
 export const FileNameSizeContainer = styled.div`
   display: flex;
@@ -7,9 +7,7 @@ export const FileNameSizeContainer = styled.div`
 `
 
 export const FileName = styled.p`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   color: ${mainFontColor};
   margin: 0px;
   max-width: ${({ secondary }) => (secondary ? '84px' : '')};
@@ -20,7 +18,5 @@ export const FileName = styled.p`
 
 export const FileSize = styled.span`
   color: ${secondaryColor};
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
 `

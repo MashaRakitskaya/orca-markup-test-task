@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { headerFontColor, mainFontColor } from 'styles/variables.styles'
+import { headerFontColor, mainFontColor, mainFontStyles } from 'styles/variables.styles'
 
 export const AdditionalInfoWithScrollbar = () => css`
   height: 150px;
@@ -38,17 +38,13 @@ export const ButtonsDropDownWrapper = styled.div`
 export const AdditionalInfoTitle = styled.p`
   margin: 0px;
   margin-bottom: 8px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   color: ${headerFontColor};
 `
 
 export const AdditionalInfoText = styled.p`
   margin: 0px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   color: ${mainFontColor};
   word-break: break-all;
 `

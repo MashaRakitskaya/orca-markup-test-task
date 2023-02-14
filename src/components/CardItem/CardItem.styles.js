@@ -5,6 +5,7 @@ import {
   headerFontColor,
   mainFontColor,
   fillImgColor,
+  mainFontStyles,
 } from 'styles/variables.styles'
 
 export const CardItemStyled = styled.article`
@@ -43,9 +44,7 @@ export const NamesWithMarginTop = styled(Names)`
   margin-top: 4px;
 `
 export const Name = styled.p`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   color: ${headerFontColor};
   margin: 0px;
   white-space: nowrap;
@@ -58,9 +57,7 @@ export const Values = styled.div`
 `
 
 export const Value = styled.p`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   color: ${mainFontColor};
   margin: 0px;
 `

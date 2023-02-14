@@ -5,6 +5,7 @@ import {
   mainBorder,
   mainBorderHover,
   mainTransition,
+  mainFontStyles,
 } from 'styles/variables.styles'
 
 export const CheckboxContainer = styled.div`
@@ -16,9 +17,7 @@ export const CheckboxContainer = styled.div`
 `
 
 export const Label = styled.label`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  ${mainFontStyles};
   white-space: nowrap;
   color: ${mainFontColor};
   cursor: pointer;
