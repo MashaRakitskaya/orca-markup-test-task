@@ -12,6 +12,9 @@ export const CardItemStyled = styled.article`
   padding: 20px 32px;
   border: ${mainBorder};
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 export const CardDataContainer = styled.div`
@@ -34,6 +37,10 @@ export const Names = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+`
+
+export const NamesWithMarginTop = styled(Names)`
+  margin-top: 4px;
 `
 export const Name = styled.p`
   font-weight: 400;
