@@ -26,6 +26,8 @@ export const mainBorder = `1px solid #cacfdb;`
 
 export const mainBorderHover = `1px solid rgba(0, 128, 255, 1);`
 
+export const blueBorderHover = `1px solid #0080ff;`
+
 export const mainTransition = ({ property }) => `
 transition-duration: 0.3s;
 transition-property: ${property};

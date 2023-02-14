@@ -10,6 +10,7 @@ import {
   fillImgColor,
   mainBoxShadow,
   mainFontStyles,
+  blueBorderHover,
 } from 'styles/variables.styles'
 
 export const DropDownListOpensUp = () => css`
@@ -43,6 +44,7 @@ export const DropDownButton = styled.button`
   }
 
   &:hover {
+    border: ${({ secondary }) => (secondary ? 'none' : `${blueBorderHover}`)};
     box-shadow: ${({ secondary }) => (secondary ? `${mainBoxShadow}` : '')};
     & SVG {
       path {
