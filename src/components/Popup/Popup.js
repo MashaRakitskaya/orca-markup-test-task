@@ -65,7 +65,7 @@ const Popup = ({ isOpenPopup, title, closePopup, additionalInfo, severity }) => 
           {getSeverityIconForPopup(severity)}
           <ModalWindowTitle>{title}</ModalWindowTitle>
         </ModalTitleSvgContainer>
-        <AdditionalInfo secondary={true} additionalInfo={additionalInfo} />
+        <AdditionalInfo isCancelButton={true} secondary={true} additionalInfo={additionalInfo} />
       </ModalWindowContent>
     </ModalWindow>,
     document.getElementById('modal-root'),

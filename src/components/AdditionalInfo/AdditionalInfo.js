@@ -8,8 +8,9 @@ import {
 import Button from 'components/Button/Button'
 import DropDown from 'components/DropDown/DropDown'
 import download from 'images/download.svg'
+import { mainBorder, mainFontColor } from 'styles/variables.styles'
 
-const AdditionalInfo = ({ additionalInfo, secondary = false }) => {
+const AdditionalInfo = ({ additionalInfo, secondary = false, isCancelButton = false }) => {
   return (
     <AdditionalInfoWrapper secondary={secondary}>
       <AdditionalInfoTitle>Additional info</AdditionalInfoTitle>
@@ -28,7 +29,15 @@ const AdditionalInfo = ({ additionalInfo, secondary = false }) => {
             { name: 'HTML', id: '4' },
           ]}
         />
-        {secondary && <Button secondary={true} buttonText={'Cancel'} />}
+        {isCancelButton && (
+          <Button
+            boxShadow={'none'}
+            fontColor={`${mainFontColor}`}
+            border={`${mainBorder}`}
+            background={'transparent'}
+            buttonText={'Cancel'}
+          />
+        )}
       </ButtonsDropDownWrapper>
     </AdditionalInfoWrapper>
   )

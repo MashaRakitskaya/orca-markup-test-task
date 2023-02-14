@@ -2,23 +2,21 @@ import styled from 'styled-components'
 import {
   mainColor,
   mainButtonFontColor,
-  mainFontColor,
   mainBoxShadow,
-  mainBorder,
   mainFontStyles,
 } from 'styles/variables.styles'
 
 export const ButtonStyled = styled.button`
-  border: ${({ secondary }) => (secondary ? `${mainBorder}` : 'none')};
-  background: ${({ secondary }) => (secondary ? 'transparent' : `${mainColor}`)};
+  border: ${({ border = 'none' }) => border};
+  background: ${({ background = `${mainColor}` }) => background};
   border-radius: 4px;
   ${mainFontStyles};
-  color: ${({ secondary }) => (secondary ? `${mainFontColor}` : `${mainButtonFontColor}`)};
+  color: ${({ fontColor = `${mainButtonFontColor}` }) => fontColor};
   padding: 6px 8px;
   padding: ${({ isBigPudding }) => (isBigPudding ? '6px 32px' : '6px 8px')};
   cursor: pointer;
 
   &:hover {
-    box-shadow: ${({ secondary }) => (secondary ? '' : `${mainBoxShadow}`)};
+    box-shadow: ${({ boxShadow = `${mainBoxShadow}` }) => boxShadow};
   }
 `
