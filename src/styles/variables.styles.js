@@ -32,4 +32,6 @@ transition-timing-function: ease;
 
 export const fillImgColor = { blue: '#0080ff', white: '#ffffff', dark: '#10111d', gray: '#cacfdb' }
 
+export const imgColorType = { red: '#E2005E', orange: '#FE7B1F', yellow: '#F8CD39' }
+
 export const mainBoxShadow = `0px 0px 0px 2px #e1eefd`
