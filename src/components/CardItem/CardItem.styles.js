@@ -18,7 +18,7 @@ export const CardItemStyled = styled.article`
   justify-content: space-between;
 `
 
-export const CardDataContainer = styled.div`
+export const Container = styled.div`
   display: grid;
   grid-template-columns: 200px 300px;
   justify-content: center;

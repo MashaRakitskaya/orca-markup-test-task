@@ -1,12 +1,12 @@
 import React from 'react'
-import { FileName, FileNameSizeContainer, FileSize } from './FileNameAndSize.styles'
+import { Name, Container, Size } from './FileNameAndSize.styles'
 
 const FileNameAndSize = ({ fileName, fileSize, secondary = false }) => {
   return (
-    <FileNameSizeContainer>
-      <FileName secondary={secondary}>{fileName}</FileName>
-      <FileSize> ({fileSize})</FileSize>
-    </FileNameSizeContainer>
+    <Container>
+      <Name secondary={secondary}>{fileName}</Name>
+      <Size> ({fileSize})</Size>
+    </Container>
   )
 }
 

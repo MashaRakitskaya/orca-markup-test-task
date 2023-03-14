@@ -3,13 +3,7 @@ import React, { useState } from 'react'
 import CopyButton from 'components/CopyButton/CopyButton'
 import ScanSourceAnchor from 'components/ScanSourceAnchor/ScanSourceAnchor'
 import FileNameAndSize from 'components/FileNameAndSize/FileNameAndSize'
-import {
-  ExpandedTableDataCell,
-  ExpandedTableRow,
-  TableDataCell,
-  TableRowEmpty,
-  TableRowStyled,
-} from './TableRow.styles'
+import { ExpandedDataCell, ExpandedRow, DataCell, RowEmpty, Row } from './TableRow.styles'
 import AdditionalInfo from 'components/AdditionalInfo/AdditionalInfo'
 import { getSeverityIcon } from 'utils/utils'
 
@@ -30,31 +24,31 @@ const TableRow = ({
 
   return (
     <>
-      <TableRowStyled onClick={toggleExpandedTr}>
-        <TableDataCell>{getSeverityIcon(severity)}</TableDataCell>
-        <TableDataCell>{name}</TableDataCell>
-        <TableDataCell>
+      <Row onClick={toggleExpandedTr}>
+        <DataCell>{getSeverityIcon(severity)}</DataCell>
+        <DataCell>{name}</DataCell>
+        <DataCell>
           <FileNameAndSize fileName={fileName} fileSize={fileSize} />
-        </TableDataCell>
-        <TableDataCell>
+        </DataCell>
+        <DataCell>
           <CopyButton ipAddressType={ipAddressV4}></CopyButton>
-        </TableDataCell>
-        <TableDataCell>
+        </DataCell>
+        <DataCell>
           <CopyButton ipAddressType={ipAddressV6}></CopyButton>
-        </TableDataCell>
-        <TableDataCell>
+        </DataCell>
+        <DataCell>
           <ScanSourceAnchor url={scanSource}></ScanSourceAnchor>
-        </TableDataCell>
-      </TableRowStyled>
+        </DataCell>
+      </Row>
 
       {isExpanded && (
-        <ExpandedTableRow>
-          <ExpandedTableDataCell colSpan="6">
+        <ExpandedRow>
+          <ExpandedDataCell colSpan="6">
             <AdditionalInfo id={id} additionalInfo={additionalInfo} />
-          </ExpandedTableDataCell>
-        </ExpandedTableRow>
+          </ExpandedDataCell>
+        </ExpandedRow>
       )}
-      <TableRowEmpty />
+      <RowEmpty />
     </>
   )
 }

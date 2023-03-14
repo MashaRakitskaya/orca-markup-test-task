@@ -23,7 +23,7 @@ export const AdditionalInfoWithScrollbar = () => css`
   }
 `
 
-export const AdditionalInfoWrapper = styled.div`
+export const Wrapper = styled.div`
   ${({ secondary }) => (secondary ? '' : `${AdditionalInfoWithScrollbar()}`)};
   padding: ${({ secondary }) => (secondary ? '24px 24px 0px 24px' : '24px 20px 24px 32px')};
 `
@@ -35,14 +35,14 @@ export const ButtonsDropDownWrapper = styled.div`
   padding-top: 16px;
 `
 
-export const AdditionalInfoTitle = styled.p`
+export const Title = styled.p`
   margin: 0px;
   margin-bottom: 8px;
   ${mainFontStyles};
   color: ${headerFontColor};
 `
 
-export const AdditionalInfoText = styled.p`
+export const Text = styled.p`
   margin: 0px;
   ${mainFontStyles};
   color: ${mainFontColor};

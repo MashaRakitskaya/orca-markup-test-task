@@ -31,7 +31,7 @@ export const Anchor = styled.a`
   }
 `
 
-export const ScanSourceAnchorWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   gap: 4px;
   cursor: pointer;
@@ -42,7 +42,7 @@ export const ScanSourceAnchorWrapper = styled.div`
   }
 `
 
-export const ScanSourceAnchorSvgContainer = styled.div`
+export const SvgContainer = styled.div`
   width: ${({ secondary }) => (secondary ? '177px' : '')};
   ${({ secondary }) => (secondary ? `${cardsAnchorOverflow()}` : '')};
 

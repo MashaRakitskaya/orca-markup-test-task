@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {
   ButtonWrapper,
-  CardDataContainer,
+  Container,
   CardItemStyled,
   CopyButtonsScanSourceContainer,
   Name,
@@ -34,7 +34,7 @@ const CardItem = ({
   return (
     <>
       <CardItemStyled>
-        <CardDataContainer>
+        <Container>
           <NamesValuesContainerWithMarginTop>
             <Names>
               <Name>Risk level:</Name>
@@ -62,7 +62,7 @@ const CardItem = ({
               <ScanSourceAnchor secondary={true} url={scanSource} />
             </CopyButtonsScanSourceContainer>
           </NamesValuesContainer>
-        </CardDataContainer>
+        </Container>
 
         <ButtonWrapper>
           <Button

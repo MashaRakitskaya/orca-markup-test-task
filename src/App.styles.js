@@ -9,7 +9,7 @@ export const Page = styled.div`
   display: flex;
 
 `
-export const PageContainer = styled.div`
+export const Container = styled.div`
   margin: auto;
   min-width: 320px;
   width: 1224px;

@@ -9,7 +9,7 @@ import {
   mainTransition,
 } from 'styles/variables.styles'
 
-export const TableDataCell = styled.td`
+export const DataCell = styled.td`
   padding: 0px;
   border-bottom: ${mainBorder};
   border-top: ${mainBorder};
@@ -30,7 +30,7 @@ export const TableDataCell = styled.td`
   }
 `
 
-export const TableRowStyled = styled.tr`
+export const Row = styled.tr`
   height: 60px;
   background: ${secondaryBgColor};
   ${mainTransition({ property: 'background' })}
@@ -55,18 +55,18 @@ export const TableRowStyled = styled.tr`
   }
 `
 
-export const ExpandedTableDataCell = styled.td`
+export const ExpandedDataCell = styled.td`
   padding: 0px;
   border: ${mainBorder};
   border-top: none;
   border-radius: 4px;
 `
 
-export const ExpandedTableRow = styled.tr`
+export const ExpandedRow = styled.tr`
   background: ${secondaryBgColor};
 `
 
-export const TableRowEmpty = styled.tr`
+export const RowEmpty = styled.tr`
   height: 8px;
   &:last-of-type {
     height: 0;

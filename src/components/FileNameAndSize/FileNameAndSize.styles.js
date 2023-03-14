@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { mainFontColor, mainFontStyles, secondaryColor } from 'styles/variables.styles'
 
-export const FileNameSizeContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   gap: 4px;
 `
 
-export const FileName = styled.p`
+export const Name = styled.p`
   ${mainFontStyles};
   color: ${mainFontColor};
   margin: 0px;
@@ -16,7 +16,7 @@ export const FileName = styled.p`
   text-overflow: ${({ secondary }) => (secondary ? 'ellipsis' : '')};
 `
 
-export const FileSize = styled.span`
+export const Size = styled.span`
   color: ${secondaryColor};
   ${mainFontStyles};
 `

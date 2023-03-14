@@ -1,12 +1,12 @@
 import React from 'react'
-import { CardsContainer } from './Cards.styles'
+import { Container } from './Cards.styles'
 import CardItem from 'components/CardItem/CardItem'
 import { tableRowsData } from 'utils/constants'
 
 const Cards = () => {
   return (
     <section>
-      <CardsContainer>
+      <Container>
         {tableRowsData.map(
           ({
             id,
@@ -32,7 +32,7 @@ const Cards = () => {
             />
           ),
         )}
-      </CardsContainer>
+      </Container>
     </section>
   )
 }

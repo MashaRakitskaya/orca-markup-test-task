@@ -37,7 +37,7 @@ export const Button = styled.button`
   }
 `
 
-export const ButtonText = styled.p`
+export const Text = styled.p`
   margin: 0px;
   max-width: 164px;
   white-space: nowrap;

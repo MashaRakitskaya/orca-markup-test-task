@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {
   ButtonClose,
-  ModalTitleSvgContainer,
+  TitleSvgContainer,
   ModalWindow,
-  ModalWindowContent,
-  ModalWindowTitle,
+  Content,
+  Title,
   SvgIconForPopupStyled,
 } from './Popup.styles'
 import AdditionalInfo from 'components/AdditionalInfo/AdditionalInfo'
@@ -55,18 +55,18 @@ const Popup = ({ isOpenPopup, title, closePopup, additionalInfo, severity }) => 
   if (!isOpenPopup) return null
   return ReactDOM.createPortal(
     <ModalWindow isOpenPopup={isOpenPopup} onClick={() => closePopup(false)} role="popup">
-      <ModalWindowContent
+      <Content
         onClick={e => {
           e.stopPropagation()
         }}
       >
         <ButtonClose role="close" type="button" onClick={() => closePopup(false)} />
-        <ModalTitleSvgContainer>
+        <TitleSvgContainer>
           {getSeverityIconForPopup(severity)}
-          <ModalWindowTitle>{title}</ModalWindowTitle>
-        </ModalTitleSvgContainer>
+          <Title>{title}</Title>
+        </TitleSvgContainer>
         <AdditionalInfo isCancelButton={true} secondary={true} additionalInfo={additionalInfo} />
-      </ModalWindowContent>
+      </Content>
     </ModalWindow>,
     document.getElementById('modal-root'),
   )
