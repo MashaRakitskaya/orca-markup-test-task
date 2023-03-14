@@ -14,9 +14,9 @@ const Header = ({ isToggle, toggleSwitchButton }) => {
       <Filters>
         <Checkbox id={'checkbox1'} label={'Show additional items'} />
         <DropDown
-          DropDownButtonTitle={'Group by'}
-          DropDownButtonImg={group}
-          DropDownButtonImgAlt={'group'}
+          ButtonTitle={'Group by'}
+          ButtonImg={group}
+          ButtonImgAlt={'group'}
           options={[
             { name: 'Name', id: '1' },
             { name: 'File name', id: '2' },
@@ -26,9 +26,9 @@ const Header = ({ isToggle, toggleSwitchButton }) => {
           ]}
         ></DropDown>
         <DropDown
-          DropDownButtonTitle={'Sort by'}
-          DropDownButtonImg={sort}
-          DropDownButtonImgAlt={'sort'}
+          ButtonTitle={'Sort by'}
+          ButtonImg={sort}
+          ButtonImgAlt={'sort'}
           options={[
             { name: 'Name', id: '1' },
             { name: 'File name', id: '2' },

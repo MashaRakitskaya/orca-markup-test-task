@@ -8,7 +8,7 @@ import {
   fillImgColor,
 } from 'styles/variables.styles'
 
-export const SwitchButtonWrapper = styled.div`
+export const Wrapper = styled.div`
   margin: 0px;
   padding: 1px;
   border-radius: 4px;
@@ -20,7 +20,7 @@ export const SwitchButtonWrapper = styled.div`
   justify-content: space-between;
 `
 
-const SwitchButtonImg = ({ backgroundColor, fillImg, fillImgHover }) => styled.div`
+const Img = ({ backgroundColor, fillImg, fillImgHover }) => styled.div`
   width: 28px;
   height: 28px;
   display: flex;
@@ -49,13 +49,13 @@ const SwitchButtonImg = ({ backgroundColor, fillImg, fillImgHover }) => styled.d
   }
 `
 
-export const SwitchButtonImgLeft = SwitchButtonImg({
+export const ImgLeft = Img({
   backgroundColor: ({ isToggle }) => (isToggle ? `${mainColor}` : 'transparent'),
   fillImg: ({ isToggle }) => (isToggle ? `${fillImgColor.white}` : `${fillImgColor.dark}`),
   fillImgHover: ({ isToggle }) => !isToggle && `${mainColor}`,
 })
 
-export const SwitchButtonImgRight = SwitchButtonImg({
+export const ImgRight = Img({
   backgroundColor: ({ isToggle }) => (isToggle ? 'transparent' : `${mainColor}`),
   fillImg: ({ isToggle }) => (isToggle ? `${fillImgColor.dark}` : `${fillImgColor.white}`),
   fillImgHover: ({ isToggle }) => isToggle && `${mainColor}`,

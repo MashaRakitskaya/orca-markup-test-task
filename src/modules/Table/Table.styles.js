@@ -12,7 +12,7 @@ export const TableStyled = styled.table`
   }
 `
 
-export const TableHeaderCell = styled.th`
+export const HeaderCell = styled.th`
   padding: 0px;
   padding-bottom: 8px;
   ${mainFontStyles};

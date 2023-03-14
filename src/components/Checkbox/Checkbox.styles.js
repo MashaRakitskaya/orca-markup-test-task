@@ -8,7 +8,7 @@ import {
   mainFontStyles,
 } from 'styles/variables.styles'
 
-export const CheckboxContainer = styled.div`
+export const Container = styled.div`
   weight: 164px;
   height: 18px;
   display: flex;

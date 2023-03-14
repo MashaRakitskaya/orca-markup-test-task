@@ -17,10 +17,10 @@ export const DropDownListOpensUp = () => css`
   top: -120px;
 `
 
-export const DropDownContainer = styled.div`
+export const Container = styled.div`
   position: relative;
 `
-export const DropDownButton = styled.button`
+export const Button = styled.button`
   cursor: pointer;
   margin: 0;
   display: flex;
@@ -55,18 +55,18 @@ export const DropDownButton = styled.button`
   }
 `
 
-export const DropDownTitle = styled.p`
+export const Title = styled.p`
   margin: 0 8px 0 8px;
   ${mainFontStyles};
   white-space: nowrap;
   color: ${({ secondary }) => (secondary ? `${secondaryFontColor}` : `${mainFontColor}`)};
 `
-export const DropDownListContainer = styled.div`
+export const ListContainer = styled.div`
   position: absolute;
   right: 0px;
   ${({ secondary }) => (secondary ? `${DropDownListOpensUp()}` : '')};
 `
-export const DropDownList = styled.ul`
+export const List = styled.ul`
   weight: 100%;
   margin: 4px 0 0 0;
   padding: 4px 0 4px 0;
@@ -76,7 +76,7 @@ export const DropDownList = styled.ul`
   ${mainFontStyles};
   color: ${mainFontColor};
 `
-export const DropDownListItem = styled.li`
+export const ListItem = styled.li`
   white-space: nowrap;
   list-style: none;
   padding-top: 4px;
@@ -96,7 +96,7 @@ export const DropDownListItem = styled.li`
   }
 `
 
-export const DropDownArrowWrapper = styled.div`
+export const ArrowWrapper = styled.div`
   margin: 0;
   display: flex;
   align-items: center;

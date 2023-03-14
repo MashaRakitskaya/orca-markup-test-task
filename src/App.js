@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Page, PageContainer, Main } from 'App.styles'
+import { Page, Container, Main } from 'App.styles'
 import Header from 'modules/Header/Header'
 import Table from 'modules/Table/Table'
 import Cards from 'modules/Cards/Cards'
@@ -14,10 +14,10 @@ const App = () => {
 
   return (
     <Page id="modal-root">
-      <PageContainer>
+      <Container>
         <Header isToggle={isToggle} toggleSwitchButton={toggleSwitchButton} />
         <Main>{isToggle ? <Table /> : <Cards />}</Main>
-      </PageContainer>
+      </Container>
     </Page>
   )
 }

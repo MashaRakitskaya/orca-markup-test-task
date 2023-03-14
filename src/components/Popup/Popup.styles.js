@@ -9,7 +9,7 @@ import {
 } from 'styles/variables.styles'
 import SVG from 'react-inlinesvg'
 
-export const ModalWindowContent = styled.div`
+export const Content = styled.div`
   background: ${secondaryBgColor};
   border-radius: 4px;
   width: 100%;
@@ -19,7 +19,7 @@ export const ModalWindowContent = styled.div`
   padding-bottom: 24px;
 `
 
-export const ModalWindowTitle = styled.h3`
+export const Title = styled.h3`
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -61,7 +61,7 @@ export const ButtonClose = styled.button`
     opacity: 0.8;
   }
 `
-export const ModalTitleSvgContainer = styled.div`
+export const TitleSvgContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
