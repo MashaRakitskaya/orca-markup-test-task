@@ -31,7 +31,6 @@ const Table = () => {
             }) => (
               <TableRow
                 key={`${id}tableRow`}
-                id={id}
                 name={name}
                 severity={severity}
                 fileName={fileName}

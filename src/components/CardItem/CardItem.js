@@ -19,6 +19,7 @@ import FileNameAndSize from 'components/FileNameAndSize/FileNameAndSize'
 import CopyButton from 'components/CopyButton/CopyButton'
 import ScanSourceAnchor from 'components/ScanSourceAnchor/ScanSourceAnchor'
 import Popup from 'components/Popup/Popup'
+import PropTypes from 'prop-types'
 
 const CardItem = ({
   name,
@@ -31,6 +32,7 @@ const CardItem = ({
   additionalInfo,
 }) => {
   const [isOpenPopup, togglePopup] = useState(false)
+
   return (
     <>
       <CardItemStyled>
@@ -81,6 +83,17 @@ const CardItem = ({
       />
     </>
   )
+}
+
+CardItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  severity: PropTypes.string.isRequired,
+  fileName: PropTypes.string.isRequired,
+  fileSize: PropTypes.string.isRequired,
+  ipAddressV4: PropTypes.string.isRequired,
+  ipAddressV6: PropTypes.string.isRequired,
+  scanSource: PropTypes.string.isRequired,
+  additionalInfo: PropTypes.string.isRequired,
 }
 
 export default CardItem

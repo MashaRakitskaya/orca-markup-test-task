@@ -1,5 +1,6 @@
 import React from 'react'
 import { ButtonStyled } from './Button.styles'
+import PropTypes from 'prop-types'
 
 const Button = ({
   buttonText,
@@ -7,7 +8,7 @@ const Button = ({
   background,
   fontColor,
   boxShadow,
-  isBigPudding = false,
+  isBigPudding,
   onClick,
 }) => {
   return (
@@ -22,6 +23,20 @@ const Button = ({
       {buttonText}
     </ButtonStyled>
   )
+}
+
+Button.propTypes = {
+  buttonText: PropTypes.string.isRequired,
+  border: PropTypes.string,
+  background: PropTypes.string,
+  fontColor: PropTypes.string,
+  boxShadow: PropTypes.string,
+  isBigPudding: PropTypes.bool,
+  onClick: PropTypes.func,
+}
+
+Button.defaultProps = {
+  isBigPudding: false,
 }
 
 export default Button

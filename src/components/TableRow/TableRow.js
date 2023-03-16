@@ -6,9 +6,9 @@ import FileNameAndSize from 'components/FileNameAndSize/FileNameAndSize'
 import { ExpandedDataCell, ExpandedRow, DataCell, RowEmpty, Row } from './TableRow.styles'
 import AdditionalInfo from 'components/AdditionalInfo/AdditionalInfo'
 import { getSeverityIcon } from 'utils/utils'
+import PropTypes from 'prop-types'
 
 const TableRow = ({
-  id,
   name,
   severity,
   fileName,
@@ -44,13 +44,24 @@ const TableRow = ({
       {isExpanded && (
         <ExpandedRow>
           <ExpandedDataCell colSpan="6">
-            <AdditionalInfo id={id} additionalInfo={additionalInfo} />
+            <AdditionalInfo additionalInfo={additionalInfo} />
           </ExpandedDataCell>
         </ExpandedRow>
       )}
       <RowEmpty />
     </>
   )
+}
+
+TableRow.propTypes = {
+  name: PropTypes.string.isRequired,
+  severity: PropTypes.string.isRequired,
+  fileName: PropTypes.string.isRequired,
+  fileSize: PropTypes.string.isRequired,
+  ipAddressV4: PropTypes.string.isRequired,
+  ipAddressV6: PropTypes.string.isRequired,
+  scanSource: PropTypes.string.isRequired,
+  additionalInfo: PropTypes.string.isRequired,
 }
 
 export default TableRow
