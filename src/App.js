@@ -9,7 +9,6 @@ const App = () => {
 
   const toggleSwitchButton = () => {
     setToggle(!isToggle)
-    localStorage.setItem('isSwitchButtonCards', isToggle)
   }
 
   return (

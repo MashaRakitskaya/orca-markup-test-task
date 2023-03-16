@@ -10,8 +10,9 @@ import {
 } from 'components/DropDown/DropDown.styles'
 import dropdownArrow from 'images/dropdownarrow.svg'
 import SVG from 'react-inlinesvg'
+import PropTypes from 'prop-types'
 
-const DropDown = ({ ButtonTitle, ButtonImg, ButtonImgAlt, options, secondary = false }) => {
+const DropDown = ({ buttonTitle, buttonImg, buttonImgAlt, options, secondary }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleDropDown = () => setIsOpen(!isOpen)
@@ -23,8 +24,8 @@ const DropDown = ({ ButtonTitle, ButtonImg, ButtonImgAlt, options, secondary = f
   return (
     <Container>
       <Button secondary={secondary} onClick={toggleDropDown}>
-        <SVG src={ButtonImg} alt={ButtonImgAlt}></SVG>
-        <Title secondary={secondary}>{ButtonTitle}</Title>
+        <SVG src={buttonImg} alt={buttonImgAlt}></SVG>
+        <Title secondary={secondary}>{buttonTitle}</Title>
         <ArrowWrapper isOpen={isOpen}>
           <SVG src={dropdownArrow} alt="dropdown arrow"></SVG>
         </ArrowWrapper>
@@ -43,5 +44,17 @@ const DropDown = ({ ButtonTitle, ButtonImg, ButtonImgAlt, options, secondary = f
     </Container>
   )
 }
+
+DropDown.propTypes = {
+  buttonTitle: PropTypes.string.isRequired,
+  buttonImg: PropTypes.any.isRequired,
+  buttonImgAlt: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({ name: PropTypes.string.isRequired, id: PropTypes.string.isRequired }),
+  ).isRequired,
+  secondary: PropTypes.bool,
+}
+
+DropDown.defaultProps = { secondary: false }
 
 export default DropDown

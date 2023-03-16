@@ -4,8 +4,9 @@ import Button from 'components/Button/Button'
 import DropDown from 'components/DropDown/DropDown'
 import download from 'images/download.svg'
 import { mainBorder, mainFontColor } from 'styles/variables.styles'
+import PropTypes from 'prop-types'
 
-const AdditionalInfo = ({ additionalInfo, secondary = false, isCancelButton = false }) => {
+const AdditionalInfo = ({ additionalInfo, secondary, isCancelButton }) => {
   return (
     <Wrapper secondary={secondary}>
       <Title>Additional info</Title>
@@ -14,9 +15,9 @@ const AdditionalInfo = ({ additionalInfo, secondary = false, isCancelButton = fa
         <Button buttonText={'Download'} />
         <DropDown
           secondary={true}
-          ButtonTitle={'Download as'}
-          ButtonImg={download}
-          ButtonImgAlt={'download'}
+          buttonTitle={'Download as'}
+          buttonImg={download}
+          buttonImgAlt={'download'}
           options={[
             { name: 'Document', id: '1' },
             { name: 'Image', id: '2' },
@@ -36,6 +37,17 @@ const AdditionalInfo = ({ additionalInfo, secondary = false, isCancelButton = fa
       </ButtonsDropDownWrapper>
     </Wrapper>
   )
+}
+
+AdditionalInfo.propTypes = {
+  additionalInfo: PropTypes.string.isRequired,
+  secondary: PropTypes.bool,
+  isCancelButton: PropTypes.bool,
+}
+
+AdditionalInfo.defaultProps = {
+  secondary: false,
+  isCancelButton: false,
 }
 
 export default AdditionalInfo
